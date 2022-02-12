@@ -1,0 +1,16 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Docker builds CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a simple script
+      - run: |
+         ecsho This is my message
+         pwd
+         ls
