@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Run a simple script
       - run: |
-         ecsho This is my message
+         echo This is my message
          pwd
          ls
