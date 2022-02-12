@@ -1,17 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Docker builds CI
-
 on: [push]
-
 jobs:
-  build:
+  Echo-my-name:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - uses: actions/checkout@v2 
-      - name: Docker build
-      - run: |
-         echo This is my message
-         pwd
-         ls
+    - name: Docker build
+      run: echo "Hello Anand"  
