@@ -4,8 +4,11 @@ on: push
 jobs:
   node-docker:
     runs-on: ubuntu-latest
-    container: 
-      image: alpine:latest
+    services:
+      browser: 
+        image: selenium/standalone-chrome:latest
+        ports:
+          - 4444:4444
     steps:
       - name: Log node version
         run: |
