@@ -1,6 +1,6 @@
 name: Actions Wokflow
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   runs-github-actions:
@@ -11,4 +11,5 @@ jobs:
         run: |
           pwd
           ls -a 
+          echo "Hello World"
 
