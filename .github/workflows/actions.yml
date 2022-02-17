@@ -1,31 +1,48 @@
-name: Close pull request
+name: Triggering flows
 
+###############################
+# on:
+#   schedule:
+#   # 1. minutes
+#   # 2. hours
+#   # 3. Day of the month
+#   # 4. Month
+#   # 5. Day of the week
+#   # https://crontab.guru/
 
+#     - cron: "30 20 * * *"
+###############################  
+
+###############################
 # # Works on push, pull_request, Note for push there are no types
 # on: [push, pull_request]
+###############################
 
+###############################
 # on: 
 #   pull_request:
 #     types: [closed]
+###############################
 
+###############################
+# on:
+#   pull_request:
+#     types: [closed]
 
-on:
-  pull_request:
-    types: [closed]
+# jobs:
+#   merge_jobs:
+#   # this job will only run if the PR has been merged
+#     if: github.event.pull_request.merged == true
+#     runs-on: ubuntu-latest
+#     steps:
+#     - run: |
+#         echo PR #${{ github.event.number }} has been merged
 
-jobs:
-  merge_jobs:
-  # this job will only run if the PR has been merged
-    if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    steps:
-    - run: |
-        echo PR #${{ github.event.number }} has been merged
-
-  close_job:
-    # this job will only run if the PR has been closed without being merged
-    if: github.event.pull_request.merged == false
-    runs-on: ubuntu-latest
-    steps:
-    - run: |
-        echo PR #${{ github.event.number }} has been closed without being merged
+#   close_job:
+#     # this job will only run if the PR has been closed without being merged
+#     if: github.event.pull_request.merged == false
+#     runs-on: ubuntu-latest
+#     steps:
+#     - run: |
+#         echo PR #${{ github.event.number }} has been closed without being merged
+###############################
