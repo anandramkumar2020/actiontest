@@ -1,6 +1,10 @@
 name: Actions Wokflow
 
-on: [push, pull_request]
+#on: [push, pull_request]
+
+on: 
+  pull_request:
+    types: [closed]
 
 jobs:
   runs-github-actions:
