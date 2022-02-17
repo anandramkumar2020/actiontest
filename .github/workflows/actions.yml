@@ -1,19 +1,31 @@
-name: Actions Wokflow
+name: Close pull request
 
-#on: [push, pull_request]
 
-on: 
+# # Works on push, pull_request, Note for push there are no types
+# on: [push, pull_request]
+
+# on: 
+#   pull_request:
+#     types: [closed]
+
+
+on:
   pull_request:
     types: [closed]
 
 jobs:
-  runs-github-actions:
+  merge_jobs:
+  # this job will only run if the PR has been merged
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-
     steps:
-      - name: List files
-        run: |
-          pwd
-          ls -a 
-          echo "Hello World"
+    - run: |
+        echo PR #${{ github.event.number }} has been merged
 
+  close_job:
+    # this job will only run if the PR has been closed without being merged
+    if: github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo PR #${{ github.event.number }} has been closed without being merged
