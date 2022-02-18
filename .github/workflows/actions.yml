@@ -3,7 +3,7 @@ name: Triggering flows
 on:
   push:
     branches:
-      - "develop/*"
+      - "feature/*"
 
 jobs:
   run-shell-commands:
@@ -14,6 +14,7 @@ jobs:
       run: |
         echo "Hello Anand"      
         pwd
+        ls
 
 
 # # Workflow will run by matching branch name
