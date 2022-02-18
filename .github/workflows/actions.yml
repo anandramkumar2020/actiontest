@@ -1,5 +1,40 @@
 name: Triggering flows
 
+on:
+  push:
+    branches:
+      - "develop/*"
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: run shell command
+      run: |
+        echo "Hello Anand"      
+        pwd
+
+
+# # Workflow will run by matching branch name
+# on:
+#   push:
+#     branches:
+#       - "feature/*" # matches feature/featA, feature/featB
+#       - "feature/**" # match feature/feat/a and all above
+     
+# on:
+#   #Workflow will run when we push to main
+#   push:
+#     branches:
+#       - "main" 
+
+# ##############################
+# # Repository Dispatch
+#  on: 
+#    repository_dispatch
+
+
 ###############################
 # on:
 #   schedule:
