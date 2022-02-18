@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "feature/*"
+      - "bug/*"
 
 jobs:
   run-shell-commands:
@@ -44,7 +45,7 @@ jobs:
 #   # 4. Month
 #   # 5. Day of the week
 #   # https://crontab.guru/
->>>>>>> Stashed changes
+
 
 # # Workflow will run by matching branch name
 # on:
