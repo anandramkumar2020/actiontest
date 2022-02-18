@@ -3,23 +3,6 @@ name: Triggering flows
 on:
   push:
     branches:
-      - "develop/*"
-
-jobs:
-  run-shell-commands:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: run shell command
-      run: |
-        echo "Hello Anand"      
-        pwd
-
-<<<<<<< Updated upstream
-=======
-on:
-  push:
-    branches:
       - "feature/*"
 
 jobs:
