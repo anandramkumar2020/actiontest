@@ -1,5 +1,5 @@
 name: ZAP Baseline scan
-on:[push]
+on: [push]
 
 jobs:
   ZAP-baseline-scan
