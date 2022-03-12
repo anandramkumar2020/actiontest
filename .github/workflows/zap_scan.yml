@@ -2,8 +2,8 @@ name: ZAP Baseline scan
 on: [push]
 
 jobs:
-  ZAP-baseline-scan
-    runs-on: ubuntu
+  ZAP-baseline-scan:
+    runs-on: ubuntu-latest
     name: BaselineScan Juice Shop
     steps:
       - name: ZAP Scan
