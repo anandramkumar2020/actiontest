@@ -3,8 +3,8 @@ on: [push]
 
 jobs:
   ZAP-baseline-scan
-    runs-on: ubuntu-latest
-    name:  BaselineScan Juice Shop
+    runs-on: ubuntu
+    name: BaselineScan Juice Shop
     steps:
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.6.1
